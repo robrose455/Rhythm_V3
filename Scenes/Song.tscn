@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Track.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Song.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/ColorManager.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/ColorFloor.tscn" type="PackedScene" id=4]
+
+[node name="Song" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="A_Track" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20 )
+
+[node name="S_Track" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15 )
+
+[node name="D_Track" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10 )
+
+[node name="F_Track" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5 )
+
+[node name="J_Track" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
+
+[node name="K_Track" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )
+
+[node name="L_Track" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15 )
+
+[node name="SC_Track" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1.62921e-07, 0.707107, -0.707107, 0, 0.707107, 0.707107, 1, 1.15202e-07, -1.15202e-07, -43.9576, 23.1064, 0 )
+
+[node name="ColorManager" type="Spatial" parent="."]
+script = ExtResource( 3 )
+
+[node name="ColorFloor" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 204.655, -2.49307, 0 )
